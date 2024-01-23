@@ -20,14 +20,14 @@
 }
 
 .menu-btn {
-    top: .5rem;
+	top: 0.5rem;
 	width: 3rem;
-    right: 1rem;
+	right: 1rem;
 	height: 3rem;
 	display: flex;
 	cursor: pointer;
 	position: fixed;
-    z-index: 999999;
+	z-index: 999999;
 	align-items: center;
 	border-radius: 0px;
 	justify-content: center;
@@ -36,11 +36,11 @@
 }
 
 .menu-btn span {
-	height: .3rem;
+	height: 0.3rem;
 	position: absolute;
 	border-radius: 8px;
 	background-color: #eab41a;
-	transition: 0.4s;
+	transition: 0.3s;
 }
 
 .menu-btn span:nth-child(1) {
@@ -74,4 +74,63 @@
 	left: 10%;
 	width: 80%;
 	transform: translateY(0px) rotate(135deg);
+}
+
+.menu {
+	top: 0;
+	right: 0;
+	width: 5.5rem;
+	height: 5.5rem;
+	position: fixed;
+	overflow: hidden;
+	background: #000;
+	border-bottom-left-radius: 5rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.menu.active {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.menu .links {
+	top: 2rem;
+	right: 2rem;
+	width: 20rem;
+	display: flex;
+	position: fixed;
+	flex-wrap: wrap;
+	overflow: hidden;
+	height: min-content;
+}
+
+.menu .links a {
+	opacity: 0;
+	width: 6rem;
+	height: 6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 1s ease-in-out;
+}
+
+.menu.active a {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.menu a i {
+    display: none;
+}
+
+.menu.active a i {
+    color: #fff;
+    display: block;
+    font-size: 2.5rem;
+    transition: color .3s ease-in-out;
+}
+
+.menu.active a i:hover {
+    color: #eab41a;
 }
