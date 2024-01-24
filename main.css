@@ -9,6 +9,7 @@
 	height: 100vh;
 	display: flex;
 	overflow: hidden;
+	background: url(./Images/bg.jpeg);
 	align-items: center;
 	justify-content: center;
 	background-position: center;
